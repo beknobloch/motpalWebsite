@@ -1,0 +1,27 @@
+abbr {
+    border: none;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    background: rgb(90, 216, 52);
+    color: white;
+    font-family: "Times";
+    margin: 0;
+}
+
+header > h1 {
+    padding: 20px 10px 2px 10px;
+    font-size: 96px;
+    letter-spacing: 8px;
+    font-stretch: expanded;
+    margin: 0;
+}
+
+header > h3 {
+    padding: 0px 10px 30px 10px;
+    font-size: 24px;
+    font-style: italic;
+    margin: 0;
+}
