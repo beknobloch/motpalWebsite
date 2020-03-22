@@ -5,7 +5,7 @@ abbr {
 
 header {
     text-align: center;
-    background: rgb(90, 216, 52);
+    background: rgb(97, 197, 255);
     color: white;
     font-family: "Times";
     margin: 0;
@@ -24,4 +24,17 @@ header > h3 {
     font-size: 24px;
     font-style: italic;
     margin: 0;
+}
+
+body h5 {
+    font-size: 18px;
+    font-family: "Times";
+}
+
+footer {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+    font-size: 12px;
+    font-family: "Times";
 }
