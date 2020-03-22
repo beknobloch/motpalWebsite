@@ -31,7 +31,40 @@ body h5 {
     font-family: "Times";
 }
 
+a {
+    color: whitesmoke;
+}
+
+.navbar{
+    text-align: center;
+    font-family: "Times";
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+.divider {
+    padding-top: 1px;
+}
+
+.navbar.second {
+    padding-top: 11px;
+}
+
+.navbar a {
+    color: rgb(133, 210, 255);
+    border: none;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: white;
+    font-size: 19.5px;
+}
+
 footer {
+    padding: 20px 10px 10px 10px;
     text-align: center;
     color: gray;
     font-style: italic;
