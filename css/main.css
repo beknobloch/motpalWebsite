@@ -3,6 +3,10 @@ abbr {
     text-decoration: none;
 }
 
+a {
+    color: whitesmoke;
+}
+
 header {
     text-align: center;
     background: rgb(97, 197, 255);
@@ -51,10 +55,6 @@ header h4 {
     margin: 0;
 }
 
-header h4 {
-
-}
-
 body {
     background-color: rgb(38, 114, 161);
 }
@@ -64,13 +64,14 @@ body h5 {
     font-family: "Times";
 }
 
+body h5 a:hover{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 body iframe {
     margin-top: 30px;
     padding: 20px 5% 50px 5%;
-}
-
-a {
-    color: whitesmoke;
 }
 
 .navbar{
