@@ -8,7 +8,17 @@ header {
     background: rgb(97, 197, 255);
     color: white;
     font-family: "Times";
-    margin: 0;
+    margin-left: -20px;
+    padding: 0;
+    width: 108%;
+}
+
+header.main{
+    height: 190px;
+}
+
+header.sub{
+    height: 116px;
 }
 
 header > h1 {
@@ -26,9 +36,37 @@ header > h3 {
     margin: 0;
 }
 
+header h2 {
+    padding: 20px 10px 2px 10px;
+    font-size: 48px;
+    letter-spacing: 8px;
+    font-stretch: expanded;
+    margin: 0;
+}
+
+header h4 {
+    padding: 0px 10px 30px 10px;
+    font-size: 14px;
+    font-style: italic;
+    margin: 0;
+}
+
+header h4 {
+
+}
+
+body {
+    background-color: rgb(38, 114, 161);
+}
+
 body h5 {
     font-size: 18px;
     font-family: "Times";
+}
+
+body iframe {
+    margin-top: 30px;
+    padding: 20px 5% 50px 5%;
 }
 
 a {
@@ -46,6 +84,10 @@ a {
 
 .divider {
     padding-top: 1px;
+}
+
+.navbar.first{
+    padding-top: 40px;
 }
 
 .navbar.second {
@@ -66,7 +108,7 @@ a {
 footer {
     padding: 20px 10px 10px 10px;
     text-align: center;
-    color: gray;
+    color: rgb(189, 189, 189);
     font-style: italic;
     font-size: 12px;
     font-family: "Times";
