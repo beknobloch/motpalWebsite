@@ -41,7 +41,6 @@ function stateChange(user) {
 }
 
 function app(user) {
-    console.log("test");
     
     let fb = firebase.database().ref("list-of-article-names");
     let fb1 = firebase.database().ref("chosen-article");
