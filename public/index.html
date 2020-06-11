@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MOTPAL</title>
+        <title>How to Play | Materialize</title>
         <meta name="author" content="Benjamin Knobloch">
 
 
@@ -9,29 +9,52 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/main.css">
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         
-
-        <nav>
-            <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo center">M.O.T.P.A.L.</a>
-            <ul class="left hide-on-med-and-down">
-                <li><a href="howtoplay.html">How to Play</a></li>
-                <li><a href="nonguesser.html">Non-Guessers</a></li>
-                <li><a href="guesser.html">Guesser</a></li>
-            </ul>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo center">M.O.T.P.A.L.</a>
+                <ul class="left hide-on-med-and-down">
+                    <li class="active"><a href="index.html">How to Play</a></li>
+                    <li><a href="nonguesser.html">Non-Guessers</a></li>
+                    <li><a href="guesser.html">Guesser</a></li>
+                </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <h3 class="center-align">How to Play</h3>
+        <div class="container">
+            <div class="card-panel blue-grey white-text z-depth-1">
+                <h4 class="flow-text"><b>M.O.T.P.A.L.</b>, or <b>"Many of These People Are Lying,"</b> is a talking game based on "Two of These People are Lying," a similar talk game created by Tom Scott and the <a class="amber-text" href="https://www.techdif.co.uk/" target="_blank">Technical Difficulties</a>.</h4>
+                <h5 class="flow-text">Play begins by selecting one person in your group to be the "guesser." It does not matter who starts, as everyone will get a turn to be guesser. All players who are not the guesser should then do the following:
+                <br>
+                <ol>
+                    <li><a class="amber-text" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Access a random, obscure Wikipedia page</a> using Wikipedia's "Random Page" feature. The nature of the article must not be clearly discernible from the name of the article. Read or skim the article for less than a minute, and try to absorb as much information as possible.</li><br>
+                    <li>Once all non-guessers have selected an article and skimmed it, <a class="amber-text" href="https://www.random.org/" target="_blank">use a tool</a> to choose one of your articles at random. At this point, no one should continue to view their article.</li><br>
+                    <li>Give the chosen article's name to the guesser, but do not tell them what it is about.</li><br>
+                    <li>The guesser's goal is to figure out which person read the article. He can question any player as many times as he wants. All other players who didn't read the article must pretend they did so by improvising based on its name. The person who did read the article must tell the truth to the best of their ability.</li><br>
+                    <li>If the guesser can correctly guess who read the article, he and the person he chose get a point. If he fails, only the person he chose gets a point.</li><br>
+                    <li>Continue playing for as long as desired. The person with the most points wins!</li><br>
+                </ol>
+                All of the above can be accomplished on this site's <a class="amber-text" href="nonguesser.html" target="_blank">appropriate page</a>.<br><br>
+                The guesser can use <a class="amber-text" href="guesser.html" target="_blank">this page</a>.
+                </h5>
             </div>
-        </nav>
-    
-    
+            <div class="card-panel blue-grey z-depth-1">
+                <div class = "video-container center-align">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3UAOs9B9UH8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
     </body>
-    <footer>
-        A website by [authors]. "Two of These People Are Lying" was created by Tom Scott and the Technical Difficulties.
-    </footer>
 </html>

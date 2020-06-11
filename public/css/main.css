@@ -2,3 +2,7 @@ abbr {
     border: none;
     text-decoration: none;
 }
+
+li a:hover, .card-action a:hover {
+    color: white;
+}
