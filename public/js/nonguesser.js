@@ -72,7 +72,12 @@ function app(user) {
 
         let rand = Math.floor(Math.random() * listOfArticleNames.length);
         let selected = listOfArticleNames[rand];
+        selected.classList.remove("grey-text");
         selected.classList.add("green-text");
+        setTimeout(function () { 
+            selected.classList.remove("green-text");
+            selected.classList.add("grey-text");
+        }, 3000);
 
         fb1.set(selected);
     }
