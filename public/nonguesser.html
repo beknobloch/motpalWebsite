@@ -32,34 +32,36 @@
             <div class="card-panel blue-grey z-depth-1">
                 <div class="card-content center-align">
                     <div class="row">
-                        <span class="card-title">Random Wikipedia Page</span>
+                        <h5 class="card-title white-text">Random Wikipedia Page</h5>
                     </div>
-                    <iframe src="https://en.wikipedia.org/wiki/Special:Random" style="width:80%;">
+                    <iframe id="random-wikipedia" src="https://en.wikipedia.org/wiki/Special:Random" style="width:90%;" height="500">
                     </iframe>
                 </div>
                 <br>
                 <div class="card-action center-align">
-                    <a class="waves-effect waves-light btn">reload</a>
+                    <button id="reload-button" class="btn waves-effect waves-light" name="action">reload
+                        <i class="material-icons right">autorenew</i>
+                    </button>
                 </div>
             </div>
         
         
             <div class="card-panel white z-depth-1">
                 <div id="article-name-field" class="card-content center-align">
-                    <h4 class="grey-text text-darken-1" style="font-style:italic;">Dolpodus</h4>
+                    
                 </div>
                 <br>
                 <div class="divider"></div>
                 <br>
                 <div class="card-action center-align">
                     <div class="input-field">
-                        <input id="article-name" type="text" maxlength="100" class="validate">
+                        <input id="article-name" type="text" maxlength="100">
                         <label for="article-name">Article Name</label>
-                        <span class="helper-text" data-error="wrong" data-success="right">Type the name of your article above!</span>
+                        <span class="grey-text darken-1">Type the name of your article above!</span>
                     </div>
                     <br>
                     <div>
-                        <button id="send-button" class="btn waves-effect waves-light" type="submit" name="action">Send random to guesser
+                        <button id="send-button" class="btn waves-effect waves-light" name="action">Send random to guesser
                             <i class="material-icons right">send</i>
                         </button>
                     </div>

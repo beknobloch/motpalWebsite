@@ -19,6 +19,8 @@ firebase.initializeApp(firebaseConfig);
 const thisUsersEntry = document.getElementById("article-name");
 const articleNameField = document.getElementById("article-name-field");
 const sendButton = document.getElementById("send-button");
+const reloadButton = document.getElementById("reload-button");
+const wikiPage = document.getElementById('random-wikipedia');
 
 
 firebase.auth().signInAnonymously().catch(function (e) { console.log(e) });
@@ -40,10 +42,13 @@ function app(user) {
     let fb1 = firebase.database().ref("chosen-article");
 
     fb.on("value", updateArticleNameList);
+    fb1.on("value", highlightSelectedArticle)
 
     thisUsersEntry.addEventListener("input", updateMyArticleName);
 
     sendButton.addEventListener("click", sendRandomArticle);
+
+    reloadButton.addEventListener("click", reloadWiki);
 
 
     function updateMyArticleName(e) {
@@ -73,29 +78,48 @@ function app(user) {
     function sendRandomArticle(e) {
         
         let listOfArticleNames = articleNameField.childNodes;
-        console.log(listOfArticleNames);
 
         let rand = Math.floor(Math.random() * listOfArticleNames.length);
         let selected = listOfArticleNames[rand];
-        selected.classList.remove("grey-text");
-        selected.classList.add("green-text");
-        setTimeout(function () { 
-            selected.classList.remove("green-text");
-            selected.classList.add("grey-text");
-        }, 3000);
+        
+        let sel = {}
+        sel.selectedArticle = selected.innerHTML;
 
-        fb1.set(selected);
+        fb1.set(sel);
+    }
+
+    function highlightSelectedArticle(received){
+
+        let retrieved = received.val();
+        let listOfArticleNames = articleNameField.childNodes;
+
+        let selected;
+        for (let i = 0 ; i < listOfArticleNames.length ; i++) {
+            if(listOfArticleNames[i].innerHTML == retrieved["selectedArticle"]) {
+                selected = listOfArticleNames[i];
+                selected.classList.remove("grey-text");
+                selected.classList.add("green-text");
+                setTimeout(function () { 
+                    selected.classList.remove("green-text");
+                    selected.classList.add("grey-text");
+                }, 3000);
+                break;
+            }
+        }
     }
 
     function clear() {
         try {
             fb.child(user.uid).remove();
         } catch (e) {
-            console.log(e);
         }
     }
 
-    window.onunload = clear;
+    function reloadWiki() {
+        wikiPage.src = wikiPage.src;
+    }
+
+    window.addEventListener("unload", clear);
 }
 
 window.onload = app;
