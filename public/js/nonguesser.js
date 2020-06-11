@@ -86,7 +86,9 @@ function app(user) {
         let listOfArticleNames = articleNameField.childNodes;
 
         let rand = Math.floor(Math.random() * listOfArticleNames.length);
+        console.log(rand);
         let selected = listOfArticleNames[rand];
+        console.log(selected);
         
         let sel = {}
         sel.selectedArticle = selected.innerHTML;
