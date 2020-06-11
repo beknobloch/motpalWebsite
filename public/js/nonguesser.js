@@ -39,7 +39,7 @@ function app(user) {
     let fb = firebase.database().ref("list-of-article-names");
     let fb1 = firebase.database().ref("chosen-article");
 
-    fb.onWrite(updateArticleNameList);
+    fb.on("value", updateArticleNameList);
 
     thisUsersEntry.addEventListener("input", updateMyArticleName);
 
@@ -51,7 +51,11 @@ function app(user) {
 
         myUpdate.name = thisUsersEntry.value;
 
-        fb.child(user.uid).set(myUpdate);
+        try {
+            fb.child(user.uid).set(myUpdate);
+        } catch (error) {
+            
+        }
     }
 
     function updateArticleNameList(received) {
@@ -61,14 +65,15 @@ function app(user) {
         articleNameField.innerHTML = "";
 
         for (let key in retrieved) {
-            let articleName = retreived[key].name;
-            articleNameField.innerHTML += "<h4 class=\"grey-text text-darken-1\" style=\"font-style:italic;\">" + articleName + "</h4><br>";
+            let articleName = retrieved[key].name;
+            articleNameField.innerHTML += "<h4 class=\"grey-text text-darken-1\" style=\"font-style:italic;\">" + articleName + "</h4>";
         }
     }
 
     function sendRandomArticle(e) {
         
         let listOfArticleNames = articleNameField.childNodes;
+        console.log(listOfArticleNames);
 
         let rand = Math.floor(Math.random() * listOfArticleNames.length);
         let selected = listOfArticleNames[rand];
