@@ -28,13 +28,13 @@
         <div class="header">
             <h3 class="center-align">Non-Guessers</h3>
         </div>
-        <div class="row">
+        <div class="container">
             <div class="card-panel blue-grey z-depth-1">
                 <div class="card-content center-align">
                     <div class="row">
                         <span class="card-title">Random Wikipedia Page</span>
                     </div>
-                    <iframe src="https://en.wikipedia.org/wiki/Special:Random" style="width:100%;">
+                    <iframe src="https://en.wikipedia.org/wiki/Special:Random" style="width:80%;">
                     </iframe>
                 </div>
                 <br>
@@ -42,17 +42,18 @@
                     <a class="waves-effect waves-light btn">reload</a>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        
+        
             <div class="card-panel white z-depth-1">
-                <div class="card-content center-align">
+                <div id="article-name-field" class="card-content center-align">
                     <h4 class="grey-text text-darken-1" style="font-style:italic;">Dolpodus</h4>
                 </div>
                 <br>
+                <div class="divider"></div>
                 <br>
                 <div class="card-action center-align">
                     <div class="input-field">
-                        <input id="article-name" type="text" class="validate">
+                        <input id="article-name" type="text" maxlength="100" class="validate">
                         <label for="article-name">Article Name</label>
                         <span class="helper-text" data-error="wrong" data-success="right">Type the name of your article above!</span>
                     </div>
