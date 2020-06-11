@@ -18,8 +18,12 @@ firebase.initializeApp(firebaseConfig);
 
 const thisUsersEntry = document.getElementById("article-name");
 const articleNameField = document.getElementById("article-name-field");
+
 const sendButton = document.getElementById("send-button");
 const reloadButton = document.getElementById("reload-button");
+const hideButton = document.getElementById("hide-button");
+let hidden = false;
+
 const wikiPage = document.getElementById('random-wikipedia');
 
 
@@ -37,6 +41,7 @@ function stateChange(user) {
 }
 
 function app(user) {
+    console.log("test");
     
     let fb = firebase.database().ref("list-of-article-names");
     let fb1 = firebase.database().ref("chosen-article");
@@ -49,6 +54,8 @@ function app(user) {
     sendButton.addEventListener("click", sendRandomArticle);
 
     reloadButton.addEventListener("click", reloadWiki);
+
+    hideButton.addEventListener("click", toggleHidden);
 
 
     function updateMyArticleName(e) {
@@ -119,8 +126,18 @@ function app(user) {
         wikiPage.src = wikiPage.src;
     }
 
+    function toggleHidden(e) {
+        if(hidden){
+            hidden = false;
+            wikiPage.height = "500";
+            hideButton.innerHTML = "hide<i class=\"material-icons right\">arrow_upward</i>";
+        }
+        else{
+            hidden = true;
+            wikiPage.height = "1";
+            hideButton.innerHTML = "reveal<i class=\"material-icons right\">arrow_downward</i>";
+        }
+    }
+
     window.addEventListener("unload", clear);
 }
-
-window.onload = app;
-
